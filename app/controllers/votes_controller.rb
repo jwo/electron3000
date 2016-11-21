@@ -1,7 +1,7 @@
 class VotesController < ApplicationController
 
   before_action do
-    @ballot = Ballot.find_by! token: session[:token]
+    @ballot = Ballot.find_by token: session[:token]
     redirect_to new_ballot_path if @ballot.nil?
   end
 
