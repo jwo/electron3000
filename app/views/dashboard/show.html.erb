@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>Electron 3000</h1>
+</div>
+
+<p>
+  To vote, you'll enter your phone number and get back a text on your phone. It'll have a link that leads to your ballot.
+</p>
+<p>
+  If you've already voted, you can view live results.
+</p>
+
+<div class="row">
+  <div class="col-xs-6">
+    <%= link_to 'Results', new_vote_path, class: 'btn btn-block btn-lg btn-success' %>
+
+  </div>
+
+  <div class="col-xs-6">
+    <%= link_to 'Vote', new_vote_path, class: 'btn btn-block btn-lg btn-primary' %>
+
+  </div>
+</div>

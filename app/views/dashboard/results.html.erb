@@ -1,0 +1,19 @@
+<h1>Results: <%= @event.name %></h1>
+
+<strong>Ballots Cast: <%= @event.ballots.where(state: 'complete').count %></strong>
+
+<h2>Sides</h2>
+
+<ul>
+  <% @event.entries.sides.sort_by(&:points).reverse.each do |e| %>
+    <li><%= e.name %> - <%= e.points %></li>
+  <% end %>
+</ul>
+
+<h2>Desserts</h2>
+
+<ul>
+  <% @event.entries.desserts.sort_by(&:points).reverse.each do |e| %>
+    <li><%= e.name %> - <%= e.points %></li>
+  <% end %>
+</ul>

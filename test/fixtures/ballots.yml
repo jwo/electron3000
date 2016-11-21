@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  phone_number: MyString
+  side_votes: MyString
+  dessert_votes: MyString
+
+two:
+  phone_number: MyString
+  side_votes: MyString
+  dessert_votes: MyString

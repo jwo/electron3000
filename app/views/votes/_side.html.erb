@@ -1,0 +1,11 @@
+<div class="col-sm-3">
+
+  <div class="thumbnail">
+    <%= link_to attachment_url(side, :photo, filename: "#{side.name.parameterize}.jpg") do %>
+      <%= attachment_image_tag side, :photo, :fill, 150, 150 %>
+    <% end %>
+    <div class="caption">
+      <h6><%= side.name %></h6>
+    </div>
+  </div>
+</div>

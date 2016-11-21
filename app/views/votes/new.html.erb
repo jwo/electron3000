@@ -1,0 +1,52 @@
+<div class="page-header">
+  <h1>OK, let's vote!</h1>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6">
+    <h2>Sides</h2>
+
+    <% @event.entries.sides.in_groups_of(4, false).each do |sides| %>
+      <div class="row">
+
+        <% sides.each do |side| %>
+          <%= render partial: 'side', locals: {side: side} %>
+        <% end %>
+      </div>
+    <% end %>
+
+
+    <h2>Desserts</h2>
+    <% @event.entries.desserts.in_groups_of(4, false).each do |sides| %>
+      <div class="row">
+
+        <% sides.each do |side| %>
+          <%= render partial: 'side', locals: {side: side} %>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+  <div class="col-xs-6">
+
+    <%= simple_form_for @ballot do |f| %>
+      <%= f.input :phone_number, disabled: true %>
+      <div class="row">
+        <div class="col-xs-6">
+          <%= f.association :first_place_side, collection: @event.entries.sides %>
+          <%= f.association :second_place_side, collection: @event.entries.sides %>
+          <%= f.association :third_place_side, collection: @event.entries.sides %>
+        </div>
+        <div class="col-xs-6">
+          <%= f.association :first_place_dessert, collection: @event.entries.desserts %>
+          <%= f.association :second_place_dessert, collection: @event.entries.desserts %>
+          <%= f.association :third_place_dessert, collection: @event.entries.desserts %>
+        </div>
+      </div>
+
+
+      <%= f.submit 'Cast Vote', class: 'btn btn-primary btn-lg btn-block' %>
+    <% end %>
+  </div>
+</div>

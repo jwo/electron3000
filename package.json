@@ -1,0 +1,27 @@
+{
+  "name": "electron3000",
+  "version": "1.0.0",
+  "description": "electron3000",
+  "main": "index.js",
+  "author": "Jesse Wolgamott",
+
+  "scripts": {
+    "start-dev": "webpack -wc --config webpack.config.babel.js",
+    "postinstall": "webpack --config webpack.config.babel.js"
+  },
+
+  "dependencies": {
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "webpack": "latest"
+  },
+
+  "devDependencies": {
+    "webpack-dev-server": "latest"
+  }
+}
