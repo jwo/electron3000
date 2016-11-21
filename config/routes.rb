@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'dashboard#show'
 
-  get 'results' => 'dashboard#results'
+  get 'results' => 'dashboard#results', as: :results
   get 'vote' => 'votes#new', as: :new_vote
   get 'register' => 'registration#new', as: :new_ballot
   post 'register' => 'registration#create', as: :ballots
