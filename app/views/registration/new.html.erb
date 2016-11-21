@@ -2,6 +2,6 @@
   <h1>OK, Let's get you a ballot</h1>
 </div>
 <%= simple_form_for @ballot do |f| %>
-  <%= f.input :phone_number, hint_text: "Enter like '5555555555'" %>
+  <%= f.input :phone_number, hint: "Enter like '5555555555'" %>
   <%= f.submit class: "btn btn-primary btn-lg" %>
 <% end %>
