@@ -11,9 +11,9 @@ class Entry < ApplicationRecord
 
   def calc_points
     if category == 'side'
-      side_votes_first * 3 + side_votes_second * 2 + side_votes_first
+      side_votes_first * 3 + side_votes_second * 2 + side_votes_third
     elsif category == 'dessert'
-      dessert_votes_first * 3 + dessert_votes_second * 2 + dessert_votes_first
+      dessert_votes_first * 3 + dessert_votes_second * 2 + dessert_votes_third
     else
       0
     end
