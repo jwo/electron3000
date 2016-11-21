@@ -10,6 +10,7 @@ class RegistrationController < ApplicationController
       BallotTexter.welcome(@ballot).deliver_later
       redirect_to check_text_path(token: @ballot.token)
     else
+      Rails.logger.info "ERROR: #{@ballot.errors.full_messages}"
       render :new
     end
 
