@@ -1,3 +1,5 @@
 You're Ready to Vote!
 
-<%= verification_url token: @ballot.token, host: 'https://electron3000.herokuapp.com' %>
+<%= verification_url token: @ballot.token, 
+                     host: ENV.fetch('HOST_LINK_FOR_TEXTS')
+%>
