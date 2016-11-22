@@ -2,7 +2,7 @@ class Ballot < ApplicationRecord
   include ActiveModel::Transitions
   has_secure_token
 
-  validates :phone_number, presence: true, format: /[0-9]9/
+  validates :phone_number, presence: true, format: /[0-9]{10}/
   validates :first_place_side, :second_place_side, :third_place_side, :first_place_dessert, :second_place_dessert, :third_place_dessert, presence: true,  on: :update
 
   belongs_to :event, touch: true
