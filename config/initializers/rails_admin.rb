@@ -34,12 +34,9 @@ RailsAdmin.config do |config|
 
   config.model Entry do
     list do
-      sort_by :points
       field :category
       field :name
-      field :points do
-        sort_reverse true
-      end
+      field :points
     end
   end
 
